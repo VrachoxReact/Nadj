@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 function ServicesSection() {
   const services = [
     {
@@ -74,8 +72,7 @@ function ServicesSection() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {services.map((service) => (
-            <Link
-              to={`/services/${service.id}`}
+            <div
               key={service.id}
               className="max-w-sm rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
             >
@@ -90,7 +87,7 @@ function ServicesSection() {
                 </h3>
                 <p className="text-gray-600 text-base">{service.description}</p>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
